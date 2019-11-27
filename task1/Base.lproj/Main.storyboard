@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="15505" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15510"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="task1" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="NXK-1S-49G">
+                                <rect key="frame" x="24" y="290" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endEdittingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="g31-Wb-GRI"/>
+                                </connections>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="JXl-A4-zTd">
+                                <rect key="frame" x="24" y="348" width="366" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <action selector="endEdittingWithSender:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="XyV-61-fTe"/>
+                                </connections>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Авторизация" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="cpC-R8-Sg6">
+                                <rect key="frame" x="24" y="94" width="366" height="56"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="56" id="2il-S1-srW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vAs-QW-lnH" customClass="Button" customModule="task1" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="479" width="414" height="51"/>
+                                <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="51" id="TCk-nh-Jfq"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                <state key="normal" title="Button">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="loginWithSender:" destination="BYZ-38-t0r" eventType="touchUpInside" id="v57-Ge-iQy"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="cpC-R8-Sg6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="4oe-wJ-fj2"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cpC-R8-Sg6" secondAttribute="trailing" constant="24" id="8El-v4-ccF"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="JXl-A4-zTd" secondAttribute="trailing" constant="24" id="9Pp-zr-uNo"/>
+                            <constraint firstItem="JXl-A4-zTd" firstAttribute="top" secondItem="NXK-1S-49G" secondAttribute="bottom" constant="24" id="DL2-lx-JdC"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="NXK-1S-49G" secondAttribute="trailing" constant="24" id="G1e-cN-zqB"/>
+                            <constraint firstItem="JXl-A4-zTd" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="N6T-99-2Qa"/>
+                            <constraint firstItem="cpC-R8-Sg6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="50" id="Pcd-Pz-hHh"/>
+                            <constraint firstItem="vAs-QW-lnH" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Xw5-dK-hTS"/>
+                            <constraint firstItem="vAs-QW-lnH" firstAttribute="top" secondItem="JXl-A4-zTd" secondAttribute="bottom" constant="97" id="agu-nK-dC6"/>
+                            <constraint firstItem="NXK-1S-49G" firstAttribute="top" secondItem="cpC-R8-Sg6" secondAttribute="bottom" constant="140" id="bId-xX-jzp"/>
+                            <constraint firstItem="NXK-1S-49G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="24" id="mOk-Qy-lpo"/>
+                            <constraint firstItem="vAs-QW-lnH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="wFk-Zw-8Pg"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="LoginButton" destination="vAs-QW-lnH" id="u4o-Xr-qLm"/>
+                        <outlet property="LoginTextField" destination="NXK-1S-49G" id="Ggj-bo-1fq"/>
+                        <outlet property="PasswordTextField" destination="JXl-A4-zTd" id="ob9-Cr-BAJ"/>
+                        <outlet property="TitleLabel" destination="cpC-R8-Sg6" id="YCQ-Np-rw3"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="137.68115942028987" y="98.4375"/>
+        </scene>
+    </scenes>
+</document>
