@@ -16,12 +16,20 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        LoginTextField.returnKeyType = UIReturnKeyType.next
+        PasswordTextField.returnKeyType = UIReturnKeyType.go
         LoginButton.addTarget(self, action: #selector(login(sender:)), for: .touchUpInside)
+        let tap: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: Selector(("hideKeyboard")))
+        view.addGestureRecognizer(tap)
     }
 
     @IBAction func login(sender: Button){
         print("Login: \(String(describing: LoginTextField.text))  Password: \(String(describing: PasswordTextField.text))")
     }
+    @IBAction func hideKeyboard(){
+                view.endEditing(true)
+        }
+    
     @IBAction func endEditting(sender: UITextField){
         if LoginTextField == sender {
             print("Login: \(String(describing: sender.text))")
